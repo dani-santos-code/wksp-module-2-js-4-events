@@ -24,11 +24,11 @@ const handleClick = () => {
   body.removeEventListener("click", handleClick);
 };
 
+body.addEventListener("click", handleClick);
+
 const timer = setTimeout(() => {
   if (!hasWon) {
     result.innerText = "You Lose!";
     body.removeEventListener("click", handleClick);
   }
 }, 1000);
-
-body.addEventListener("click", handleClick);
