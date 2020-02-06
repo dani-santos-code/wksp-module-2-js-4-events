@@ -9,3 +9,9 @@
 // OPTIONAL
 // Feel free to add some CSS to this once you're done
 // --------------------------------------------------
+
+const handleClick = () => {
+  document.querySelector("body").style.backgroundColor = "rgb(51, 51, 204)";
+  console.log("I was clicked!!!!!");
+};
+window.addEventListener("click", handleClick);
