@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Countdown Timer</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Teko&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+  </head>
+  <body>
+    <h1 class="title">Countdown Timer</h1>
+    <div class="container">
+        <section class="current-time">
+            <p class="current-time__text">Time elapsed:<span id="timer"></span></p>
+        </section class="current-time">
+        <section class="time-selection">
+                <label class="time-selection__label" for="seconds-input">Enter the seconds:</label>
+                <input class="time-selection__input" name="seconds-input" id="seconds-input" type="number" pattern="[0-9]+" required/>
+        </section>
+        <section class="clock-wrapper">
+            <div class="clock">
+                <span class="clock__time"></span>
+            </div>
+        </section>
+        <section class="user-controller">
+            <button class="user-controller_stop" type="button">STOP</button>
+            <button class="user-controller_start" type="button">START</button>
+        </section>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
