@@ -2,14 +2,21 @@ const minSeconds = 0;
 let currentSeconds = 0;
 const MAX_SECONDS = 60;
 
+const formatUserInput = time => {
+  if (time < 10) {
+    document.querySelector(".clock__time").innerText = `00:0${currentSeconds}`;
+  } else {
+    document.querySelector(".clock__time").innerText = `00:${currentSeconds}`;
+  }
+};
 const handleChange = () => {
   if (event.keyCode == 13) {
     currentSeconds = event.target.value;
     if (currentSeconds <= MAX_SECONDS) {
-      document.querySelector(".clock__time").innerText = `00:${currentSeconds}`;
+      formatUserInput(currentSeconds);
       amountOfSecondsInput.removeEventListener("keydown", handleChange);
     } else {
-      alert("Enter number up to (and including) 60");
+      alert("Enter number up to (and including) 60 and press ENTER");
     }
   }
 };
@@ -28,10 +35,10 @@ const handleStart = () => {
       if (currentSeconds === 0) {
         handleStop();
       }
-      document.querySelector(".clock__time").innerText = `00:${currentSeconds}`;
+      formatUserInput(currentSeconds);
     }, 1000);
   } else {
-    alert("Please, enter a number from 1 to 60!");
+    alert("Please, enter a number from 1 to 60 and press ENTER");
   }
 };
 

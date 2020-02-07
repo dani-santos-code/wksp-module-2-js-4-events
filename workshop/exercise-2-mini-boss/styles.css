@@ -32,15 +32,26 @@ p {
 }
 
 /*---TIME INPUT---*/
+
 .time-selection__input {
-  height: 40px;
-  border: 2px solid black;
+  height: 30px;
+  border: 2px solid #7f804f;
   border-radius: 5px;
+  font-size: 0.8em;
+  text-align: center;
 }
 
 .time-selection__label {
   margin-right: 0;
   font-size: 1.3em;
+}
+
+@media (max-width: 480px) {
+  .time-selection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 /*---CLOCK---*/
