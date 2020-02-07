@@ -7,7 +7,7 @@ const handleChange = () => {
     currentSeconds = event.target.value;
     if (currentSeconds <= MAX_SECONDS) {
       document.querySelector(".clock__time").innerText = `00:${currentSeconds}`;
-      amountOfSecondsInput.removeEventListener("change", handleChange);
+      amountOfSecondsInput.removeEventListener("keydown", handleChange);
     } else {
       alert("Enter number up to (and including) 60");
     }
@@ -22,13 +22,17 @@ amountOfSecondsInput.addEventListener("keydown", () => {
 let timer;
 
 const handleStart = () => {
-  timer = setInterval(() => {
-    currentSeconds -= 1;
-    if (currentSeconds === 0) {
-      handleStop();
-    }
-    document.querySelector(".clock__time").innerText = `00:${currentSeconds}`;
-  }, 1000);
+  if (currentSeconds >= 1) {
+    timer = setInterval(() => {
+      currentSeconds -= 1;
+      if (currentSeconds === 0) {
+        handleStop();
+      }
+      document.querySelector(".clock__time").innerText = `00:${currentSeconds}`;
+    }, 1000);
+  } else {
+    alert("Please, enter a number from 1 to 60!");
+  }
 };
 
 const handleStop = () => {
@@ -44,4 +48,9 @@ document
   .querySelector(".user-controller_stop")
   .addEventListener("click", handleStop);
 
-// clearInterval(startTimer);
+document.querySelector("#timer").innerText = `${new Date().toLocaleString(
+  "en-US",
+  {
+    timeZone: "America/Toronto"
+  }
+)}`;

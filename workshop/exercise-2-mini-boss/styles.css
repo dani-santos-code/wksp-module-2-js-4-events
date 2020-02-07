@@ -60,3 +60,11 @@ p {
   top: 39%;
   left: 37%;
 }
+
+.user-controller_stop,
+.user-controller_start {
+  padding: 20px;
+  border: 2px solid #297121;
+  border-radius: 5px;
+  margin: 10px;
+}
