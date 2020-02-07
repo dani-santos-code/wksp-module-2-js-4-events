@@ -33,13 +33,13 @@ p {
 
 /*---TIME INPUT---*/
 .time-selection__input {
-  padding: 20px;
+  height: 40px;
   border: 2px solid black;
   border-radius: 5px;
 }
 
 .time-selection__label {
-  margin: 0;
+  margin-right: 0;
   font-size: 1.3em;
 }
 
@@ -47,18 +47,18 @@ p {
 
 .clock {
   margin: 20px;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 14px solid #7f804f;
   position: relative;
 }
 
 .clock__time {
-  font-size: 3em;
+  font-size: 2.5em;
   position: absolute;
-  top: 39%;
-  left: 37%;
+  top: 41%;
+  left: 33%;
 }
 
 .user-controller_stop,
