@@ -16,18 +16,18 @@ const handleClick = () => {
   buttonGenerator.style.backgroundColor = "green";
   buttonGenerator.style.color = "#f2f2f2";
   for (let i = 1; i <= 20; i++) {
-    const buttonsWrapper = document.createElement("button");
-    buttonsWrapper.innerText = i;
-    buttonsWrapper.style.padding = "20px";
-    buttonsWrapper.style.cursor = "pointer";
-    buttonsWrapper.style.color = "white";
-    buttonsWrapper.style.position = "absolute";
-    buttonsWrapper.style.top = `${Math.floor(Math.random() * 1000)}px`;
-    buttonsWrapper.style.left = `${Math.floor(Math.random() * 1000)}px`;
-    buttonsWrapper.style.backgroundColor = "#949e94";
-    buttonsContainer.appendChild(buttonsWrapper);
-    buttonsWrapper.addEventListener("click", () => {
-      toggleButtonColor(buttonsWrapper);
+    const button = document.createElement("button");
+    button.innerText = i;
+    button.style.padding = "20px";
+    button.style.cursor = "pointer";
+    button.style.color = "white";
+    button.style.position = "absolute";
+    button.style.top = `${Math.random() * 80}vh`;
+    button.style.left = `${Math.random() * 80}vw`;
+    button.style.backgroundColor = "#949e94";
+    buttonsContainer.appendChild(button);
+    button.addEventListener("click", () => {
+      toggleButtonColor(button);
     });
   }
   buttonGenerator.removeEventListener("click", handleClick);

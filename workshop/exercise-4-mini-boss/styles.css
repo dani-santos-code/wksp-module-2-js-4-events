@@ -9,20 +9,17 @@ body {
   justify-items: center;
 }
 
-.button-generator {
+.start-game {
   padding: 10px;
   margin: 10px;
   cursor: pointer;
   font-weight: 500;
   font-size: 14px;
+  background-color: green;
+  color: #f2f2f2;
 }
 
 .buttons-wrapper {
   text-align: center;
   position: relative;
-}
-
-.new-buttons-container {
-  display: grid;
-  grid-gap: 10px;
 }
