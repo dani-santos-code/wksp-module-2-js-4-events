@@ -100,6 +100,15 @@ All DOM nodes have methods we can use to _notify_ us of an event.
 ```js
 // Example
 
+const body = document.querySelector("body");
+body.appendChild(body.createElement("button");)
+const changeBackground = (el) => {
+    el.setAttribute("style", "background-color: blue");
+}
+
+const button = document.getElementById("button");
+button.addEventListener("click", changeBackground(button));
+
 ```
 
 ---
@@ -115,7 +124,7 @@ This object includes lots of stuff.
 - `stopPropagation()`
 
 ---
-    
+
 ### Default Actions
 
 Some events have _default_ actions associated to them.
@@ -129,7 +138,7 @@ In most cases handlers are called _before_ the default action takes place.
 You can prevent the _default_ action from happening by calling `event.preventDefault();` in the eventListener function.
 
 ---
-    
+
 ### target
 
 - The  `target` property refers to the node where they originated. (example)
@@ -171,7 +180,7 @@ Handlers registered on nodes with children will also receive events that happen 
 `<p>A paragraph with a <button id="the-btn">button</button>.</p>`
 
 ```js
-    
+
 let para = document.querySelector("p");
 let button = document.querySelector("button");
 

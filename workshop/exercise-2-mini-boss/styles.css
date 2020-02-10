@@ -1,0 +1,81 @@
+body,
+p {
+  margin: 0;
+  font-family: "Teko", sans-serif;
+  font-size: 1em;
+}
+
+.title {
+  font-size: 3.5em;
+  text-align: center;
+  opacity: 1;
+  animation: flicker 1s ease-in-out 5;
+}
+
+@keyframes flicker {
+  50% {
+    opacity: 0;
+    color: rgb(128, 128, 8);
+  }
+}
+
+.container {
+  margin: 0 60px;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  grid-gap: 5px;
+}
+/*---CURRENT TIME---*/
+.current-time__text {
+  font-size: 1.3em;
+}
+
+/*---TIME INPUT---*/
+
+.time-selection__input {
+  height: 30px;
+  border: 2px solid #7f804f;
+  border-radius: 5px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.time-selection__label {
+  margin-right: 0;
+  font-size: 1.3em;
+}
+
+@media (max-width: 480px) {
+  .time-selection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+/*---CLOCK---*/
+
+.clock {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 14px solid #7f804f;
+  position: relative;
+}
+
+.clock__time {
+  font-size: 2.5em;
+  position: absolute;
+  top: 41%;
+  left: 33%;
+}
+
+.user-controller_stop,
+.user-controller_start {
+  padding: 20px;
+  border: 2px solid #297121;
+  border-radius: 5px;
+  margin: 10px;
+}
